@@ -1,0 +1,144 @@
+{
+  "Nav": {
+    "home": "Accueil",
+    "listings": "Annonces",
+    "postListing": "Mettre une annonce",
+    "login": "Connexion"
+  },
+  "Footer": {
+    "tagline": "Trouvez votre prochain logement à Douala et Yaoundé.",
+    "about": "À propos",
+    "contact": "Contact",
+    "legal": "Mentions légales"
+  },
+  "LocaleSwitcher": {
+    "label": "Langue",
+    "fr": "Français",
+    "en": "English"
+  },
+  "Home": {
+    "metaTitle": "ImmoCM",
+    "metaDescription": "Trouvez votre maison à Douala et Yaoundé",
+    "heroTitle": "Trouvez votre maison à Douala et Yaoundé",
+    "heroSubtitle": "Des milliers d'annonces de location et de vente vérifiées.",
+    "recentListings": "Annonces récentes",
+    "ctaTitle": "Vous avez un bien à louer ou à vendre ?",
+    "ctaSubtitle": "Publiez votre annonce gratuitement et touchez des milliers d'acheteurs et de locataires.",
+    "ctaButton": "Publier une annonce"
+  },
+  "SearchBar": {
+    "rent": "Louer",
+    "buy": "Acheter",
+    "cityPlaceholder": "Ville",
+    "propertyTypePlaceholder": "Type de bien",
+    "search": "Rechercher"
+  },
+  "ListingFilters": {
+    "listingTypeTitle": "Type d'annonce",
+    "rent": "Louer",
+    "buy": "Acheter",
+    "cityTitle": "Ville",
+    "neighborhoodTitle": "Quartier",
+    "neighborhoodPlaceholder": "Tous les quartiers",
+    "propertyTypeTitle": "Type de bien",
+    "priceTitle": "Prix (FCFA)",
+    "minLabel": "Min",
+    "maxLabel": "Max",
+    "apply": "Appliquer",
+    "bedroomsTitle": "Chambres"
+  },
+  "SortSelect": {
+    "sortBy": "Trier par",
+    "newest": "Plus récent",
+    "price_asc": "Prix croissant",
+    "price_desc": "Prix décroissant",
+    "oldest": "Plus ancien"
+  },
+  "ListingResultsPage": {
+    "titleBrowse": "Annonces",
+    "titleSearch": "Résultats de recherche",
+    "filters": "Filtres",
+    "resultsCount": "{count, plural, one {# annonce} other {# annonces}}",
+    "empty": "Aucune annonce ne correspond à votre recherche."
+  },
+  "ListingPagination": {
+    "previous": "Précédent",
+    "next": "Suivant"
+  },
+  "ListingCard": {
+    "bedrooms": "{count, plural, one {# chambre} other {# chambres}}"
+  },
+  "ListingDetail": {
+    "propertyTypeLabel": "Type de bien",
+    "bedroomsLabel": "Chambres",
+    "bathroomsLabel": "Salles de bain",
+    "areaLabel": "Superficie",
+    "cityLabel": "Ville",
+    "neighborhoodLabel": "Quartier",
+    "publishedOn": "Publiée le {date}",
+    "description": "Description",
+    "amenities": "Équipements",
+    "similarListings": "Annonces similaires"
+  },
+  "PhotoGallery": {
+    "previousPhoto": "Photo précédente",
+    "nextPhoto": "Photo suivante",
+    "goToPhoto": "Aller à la photo {index}"
+  },
+  "ContactSection": {
+    "title": "Contacter l'annonceur",
+    "call": "Appeler",
+    "whatsapp": "WhatsApp",
+    "writeOnWhatsapp": "Écrire sur WhatsApp"
+  },
+  "ContactPage": {
+    "metaTitle": "Contact — ImmoCM",
+    "metaDescription": "Contactez l'équipe ImmoCM par email ou WhatsApp.",
+    "title": "Contact",
+    "subtitle": "Une question, un problème avec une annonce ? Écrivez-nous ci-dessous ou contactez-nous directement sur WhatsApp.",
+    "writeOnWhatsapp": "Écrire sur WhatsApp"
+  },
+  "ContactForm": {
+    "nameLabel": "Nom complet",
+    "emailLabel": "Email",
+    "messageLabel": "Message",
+    "submit": "Envoyer",
+    "successToast": "Votre message a été envoyé. Nous vous répondrons rapidement."
+  },
+  "AboutPage": {
+    "metaTitle": "À propos — ImmoCM",
+    "metaDescription": "Découvrez la mission d'ImmoCM, la plateforme d'annonces immobilières au Cameroun.",
+    "title": "À propos d'ImmoCM",
+    "paragraph1": "ImmoCM est une plateforme camerounaise de petites annonces immobilières dédiée aux villes de Douala et Yaoundé. Notre mission est de simplifier la recherche et la publication d'annonces de location et de vente, en mettant directement en relation propriétaires, agents et locataires ou acheteurs.",
+    "paragraph2": "Chaque annonce publiée sur ImmoCM est vérifiée par notre équipe avant sa mise en ligne, afin de garantir la fiabilité des informations présentées aux visiteurs.",
+    "paragraph3": "ImmoCM est gratuit pour les agents et propriétaires souhaitant publier une annonce, et gratuit pour les visiteurs qui consultent les annonces."
+  },
+  "LegalPage": {
+    "metaTitle": "Mentions légales — ImmoCM",
+    "metaDescription": "Mentions légales et politique de confidentialité d'ImmoCM.",
+    "title": "Mentions légales",
+    "publisherTitle": "Éditeur du site",
+    "publisherBody": "ImmoCM est une plateforme de petites annonces immobilières opérant à Douala et Yaoundé, Cameroun.",
+    "termsTitle": "Conditions d'utilisation",
+    "termsBody": "L'utilisation du site ImmoCM implique l'acceptation pleine et entière des présentes conditions. Toute annonce publiée doit correspondre à un bien réellement disponible et aux informations exactes. ImmoCM se réserve le droit de refuser ou de retirer toute annonce ne respectant pas ces conditions.",
+    "privacyTitle": "Politique de confidentialité",
+    "privacyBody": "Les données personnelles collectées (nom, téléphone, email) sont utilisées uniquement dans le cadre de la mise en relation entre annonceurs et visiteurs, et ne sont jamais revendues à des tiers."
+  },
+  "PropertyType": {
+    "APARTMENT": "Appartement",
+    "HOUSE": "Maison",
+    "STUDIO": "Studio",
+    "VILLA": "Villa",
+    "LAND": "Terrain",
+    "COMMERCIAL": "Commercial"
+  },
+  "ListingType": {
+    "RENT": "À louer",
+    "SALE": "À vendre"
+  },
+  "PaymentPeriod": {
+    "MONTHLY": "Mensuel",
+    "YEARLY": "Annuel",
+    "NEGOTIABLE": "Négociable"
+  }
+}

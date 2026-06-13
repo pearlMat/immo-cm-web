@@ -1,0 +1,144 @@
+{
+  "Nav": {
+    "home": "Home",
+    "listings": "Listings",
+    "postListing": "Post a listing",
+    "login": "Log in"
+  },
+  "Footer": {
+    "tagline": "Find your next home in Douala and Yaoundé.",
+    "about": "About",
+    "contact": "Contact",
+    "legal": "Legal notice"
+  },
+  "LocaleSwitcher": {
+    "label": "Language",
+    "fr": "Français",
+    "en": "English"
+  },
+  "Home": {
+    "metaTitle": "ImmoCM",
+    "metaDescription": "Find your home in Douala and Yaoundé",
+    "heroTitle": "Find your home in Douala and Yaoundé",
+    "heroSubtitle": "Thousands of verified rental and sale listings.",
+    "recentListings": "Recent listings",
+    "ctaTitle": "Do you have a property to rent or sell?",
+    "ctaSubtitle": "Post your listing for free and reach thousands of buyers and renters.",
+    "ctaButton": "Post a listing"
+  },
+  "SearchBar": {
+    "rent": "Rent",
+    "buy": "Buy",
+    "cityPlaceholder": "City",
+    "propertyTypePlaceholder": "Property type",
+    "search": "Search"
+  },
+  "ListingFilters": {
+    "listingTypeTitle": "Listing type",
+    "rent": "Rent",
+    "buy": "Buy",
+    "cityTitle": "City",
+    "neighborhoodTitle": "Neighborhood",
+    "neighborhoodPlaceholder": "All neighborhoods",
+    "propertyTypeTitle": "Property type",
+    "priceTitle": "Price (FCFA)",
+    "minLabel": "Min",
+    "maxLabel": "Max",
+    "apply": "Apply",
+    "bedroomsTitle": "Bedrooms"
+  },
+  "SortSelect": {
+    "sortBy": "Sort by",
+    "newest": "Newest",
+    "price_asc": "Price: low to high",
+    "price_desc": "Price: high to low",
+    "oldest": "Oldest"
+  },
+  "ListingResultsPage": {
+    "titleBrowse": "Listings",
+    "titleSearch": "Search results",
+    "filters": "Filters",
+    "resultsCount": "{count, plural, one {# listing} other {# listings}}",
+    "empty": "No listings match your search."
+  },
+  "ListingPagination": {
+    "previous": "Previous",
+    "next": "Next"
+  },
+  "ListingCard": {
+    "bedrooms": "{count, plural, one {# bedroom} other {# bedrooms}}"
+  },
+  "ListingDetail": {
+    "propertyTypeLabel": "Property type",
+    "bedroomsLabel": "Bedrooms",
+    "bathroomsLabel": "Bathrooms",
+    "areaLabel": "Area",
+    "cityLabel": "City",
+    "neighborhoodLabel": "Neighborhood",
+    "publishedOn": "Published on {date}",
+    "description": "Description",
+    "amenities": "Amenities",
+    "similarListings": "Similar listings"
+  },
+  "PhotoGallery": {
+    "previousPhoto": "Previous photo",
+    "nextPhoto": "Next photo",
+    "goToPhoto": "Go to photo {index}"
+  },
+  "ContactSection": {
+    "title": "Contact the lister",
+    "call": "Call",
+    "whatsapp": "WhatsApp",
+    "writeOnWhatsapp": "Message on WhatsApp"
+  },
+  "ContactPage": {
+    "metaTitle": "Contact — ImmoCM",
+    "metaDescription": "Contact the ImmoCM team by email or WhatsApp.",
+    "title": "Contact",
+    "subtitle": "A question, an issue with a listing? Write to us below or contact us directly on WhatsApp.",
+    "writeOnWhatsapp": "Message on WhatsApp"
+  },
+  "ContactForm": {
+    "nameLabel": "Full name",
+    "emailLabel": "Email",
+    "messageLabel": "Message",
+    "submit": "Send",
+    "successToast": "Your message has been sent. We'll get back to you shortly."
+  },
+  "AboutPage": {
+    "metaTitle": "About — ImmoCM",
+    "metaDescription": "Discover ImmoCM's mission, the real estate listings platform in Cameroon.",
+    "title": "About ImmoCM",
+    "paragraph1": "ImmoCM is a Cameroonian real estate listings platform dedicated to the cities of Douala and Yaoundé. Our mission is to simplify the search for and publication of rental and sale listings, by directly connecting owners, agents, and tenants or buyers.",
+    "paragraph2": "Every listing published on ImmoCM is reviewed by our team before going live, to guarantee the reliability of the information shown to visitors.",
+    "paragraph3": "ImmoCM is free for agents and owners who want to post a listing, and free for visitors browsing listings."
+  },
+  "LegalPage": {
+    "metaTitle": "Legal notice — ImmoCM",
+    "metaDescription": "Legal notice and privacy policy for ImmoCM.",
+    "title": "Legal notice",
+    "publisherTitle": "Publisher",
+    "publisherBody": "ImmoCM is a real estate listings platform operating in Douala and Yaoundé, Cameroon.",
+    "termsTitle": "Terms of use",
+    "termsBody": "Using the ImmoCM website implies full and unconditional acceptance of these terms. Every listing published must correspond to a property that is actually available, with accurate information. ImmoCM reserves the right to refuse or remove any listing that does not comply with these terms.",
+    "privacyTitle": "Privacy policy",
+    "privacyBody": "Personal data collected (name, phone number, email) is used solely to connect listers with visitors, and is never resold to third parties."
+  },
+  "PropertyType": {
+    "APARTMENT": "Apartment",
+    "HOUSE": "House",
+    "STUDIO": "Studio",
+    "VILLA": "Villa",
+    "LAND": "Land",
+    "COMMERCIAL": "Commercial"
+  },
+  "ListingType": {
+    "RENT": "For rent",
+    "SALE": "For sale"
+  },
+  "PaymentPeriod": {
+    "MONTHLY": "Monthly",
+    "YEARLY": "Yearly",
+    "NEGOTIABLE": "Negotiable"
+  }
+}

@@ -2,6 +2,7 @@ import createMiddleware from "next-intl/middleware"
 import { NextResponse, type NextRequest } from "next/server"
 
 import { AUTH_COOKIE_NAME } from "@/lib/auth-server"
+import { dashboardFor } from "@/lib/dashboard"
 import { routing } from "@/i18n/routing"
 import { UserRole } from "@/types/enums"
 
@@ -22,9 +23,7 @@ export function decodeRole(token: string): UserRole | null {
   }
 }
 
-export function dashboardFor(role: UserRole | null): string {
-  return role === UserRole.ADMIN ? `${ADMIN_PREFIX}/tableau-de-bord` : `${AGENT_PREFIX}/tableau-de-bord`
-}
+export { dashboardFor }
 
 export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl

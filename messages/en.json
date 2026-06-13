@@ -140,5 +140,147 @@
     "MONTHLY": "Monthly",
     "YEARLY": "Yearly",
     "NEGOTIABLE": "Negotiable"
+  },
+  "Auth": {
+    "errors": {
+      "required": "This field is required",
+      "invalidEmail": "Invalid email address",
+      "invalidPhone": "Invalid phone number (format +237 6XX XXX XXX)",
+      "passwordMin": "Password must be at least 8 characters",
+      "passwordComplexity": "Password must contain at least one letter and one digit",
+      "passwordMismatch": "Passwords do not match",
+      "accountTypeRequired": "Please select an account type"
+    },
+    "fullNameLabel": "Full name",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone",
+    "whatsappLabel": "WhatsApp (optional)",
+    "accountTypeLabel": "Account type",
+    "accountTypeAgent": "Agent",
+    "accountTypeLandlord": "Landlord",
+    "passwordLabel": "Password",
+    "confirmPasswordLabel": "Confirm password",
+    "phonePlaceholder": "+237 6XX XXX XXX"
+  },
+  "RegisterPage": {
+    "metaTitle": "Register - ImmoCM",
+    "title": "Create an account",
+    "subtitle": "Sign up to publish your listings on ImmoCM.",
+    "submit": "Sign up",
+    "submitting": "Signing up...",
+    "successTitle": "Check your email",
+    "successBody": "A verification email has been sent to your address. Click the link in it to activate your account.",
+    "errorToast": "Something went wrong. Please try again.",
+    "alreadyHaveAccount": "Already have an account?",
+    "loginLink": "Log in"
+  },
+  "LoginPage": {
+    "metaTitle": "Log in - ImmoCM",
+    "title": "Log in",
+    "subtitle": "Log in to your ImmoCM account.",
+    "submit": "Log in",
+    "submitting": "Logging in...",
+    "errorToast": "Incorrect email or password.",
+    "forgotPassword": "Forgot password?",
+    "noAccount": "Don't have an account?",
+    "registerLink": "Sign up"
+  },
+  "VerifyEmailPage": {
+    "metaTitle": "Email verification - ImmoCM",
+    "successTitle": "Email verified!",
+    "successBody": "Your email address has been verified. You can now log in.",
+    "loginLink": "Log in",
+    "errorTitle": "Invalid or expired link",
+    "errorBody": "This verification link is no longer valid. You can request a new verification email.",
+    "resendButton": "Resend verification email",
+    "resendSuccess": "A new verification email has been sent.",
+    "resendError": "Could not send the email. Please try again."
+  },
+  "ForgotPasswordPage": {
+    "metaTitle": "Forgot password - ImmoCM",
+    "title": "Forgot password",
+    "subtitle": "Enter your email address to receive a reset link.",
+    "submit": "Send link",
+    "submitting": "Sending...",
+    "confirmationMessage": "If an account exists with this email, a reset link has been sent.",
+    "backToLogin": "Back to login"
+  },
+  "ResetPasswordPage": {
+    "metaTitle": "Reset password - ImmoCM",
+    "title": "Reset password",
+    "subtitle": "Choose a new password.",
+    "submit": "Reset password",
+    "submitting": "Resetting...",
+    "successToast": "Password reset. You can now log in.",
+    "errorToast": "Invalid or expired link.",
+    "invalidTokenTitle": "Invalid link",
+    "invalidTokenBody": "This reset link is invalid or has expired.",
+    "forgotPasswordLink": "Request a new link"
+  },
+  "AgentNav": {
+    "dashboard": "Dashboard",
+    "myListings": "My listings",
+    "newListing": "New listing",
+    "notifications": "Notifications",
+    "profile": "Profile"
+  },
+  "AgentDashboard": {
+    "title": "Dashboard",
+    "statTotal": "Total listings",
+    "statPending": "Pending",
+    "statApproved": "Approved",
+    "statRejected": "Rejected",
+    "newListingCta": "Post a new listing",
+    "recentActivity": "Recent activity",
+    "noActivity": "No recent activity."
+  },
+  "MyListingsPage": {
+    "title": "My listings",
+    "loading": "Loading...",
+    "tabAll": "All",
+    "tabPending": "Pending",
+    "tabApproved": "Approved",
+    "tabRejected": "Rejected",
+    "columnTitle": "Title",
+    "columnNeighborhood": "Neighborhood",
+    "columnPrice": "Price",
+    "columnStatus": "Status",
+    "columnDate": "Date",
+    "columnActions": "Actions",
+    "actionView": "View",
+    "actionEdit": "Edit",
+    "actionDelete": "Delete",
+    "actionResubmit": "Resubmit",
+    "deleteConfirmTitle": "Delete this listing?",
+    "deleteConfirmDescription": "This action cannot be undone.",
+    "resubmitConfirmTitle": "Resubmit this listing?",
+    "resubmitConfirmDescription": "The listing will be submitted for review again.",
+    "deleteSuccess": "Listing deleted.",
+    "resubmitSuccess": "Listing resubmitted.",
+    "errorToast": "Something went wrong. Please try again.",
+    "empty": "No listings."
+  },
+  "AgentProfile": {
+    "title": "Profile",
+    "personalInfoTitle": "Personal information",
+    "securityTitle": "Security",
+    "save": "Save",
+    "saving": "Saving...",
+    "currentPasswordLabel": "Current password",
+    "newPasswordLabel": "New password",
+    "updateSuccess": "Profile updated.",
+    "passwordUpdateSuccess": "Password changed.",
+    "errorToast": "Something went wrong. Please try again."
+  },
+  "ListingStatus": {
+    "PENDING": "Pending",
+    "APPROVED": "Approved",
+    "REJECTED": "Rejected",
+    "PENDING_PAYMENT": "Payment required",
+    "DELETED": "Deleted"
+  },
+  "ConfirmModal": {
+    "confirm": "Confirm",
+    "cancel": "Cancel"
   }
 }

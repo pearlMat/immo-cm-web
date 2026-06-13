@@ -55,3 +55,10 @@ export interface PaginatedListings {
   limit: number
   totalPages: number
 }
+
+export interface AgentListingStats {
+  total: number
+  pending: number
+  approved: number
+  rejected: number
+}

@@ -42,6 +42,11 @@ export function getAdminListing(id: string): Promise<ListingWithStatusLog> {
   return api.get<ListingWithStatusLog>(`/admin/listings/${id}`)
 }
 
+/** Updates a listing on behalf of its agent from a multipart form (fields + photo files). */
+export function updateAdminListing(id: string, formData: FormData): Promise<Listing> {
+  return api.patch<Listing>(`/admin/listings/${id}`, formData)
+}
+
 /** Approves a pending listing, making it publicly visible. */
 export function approveListing(id: string): Promise<void> {
   return api.post<void>(`/admin/listings/${id}/approve`)

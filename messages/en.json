@@ -379,6 +379,7 @@
     "columnDate": "Date",
     "columnActions": "Actions",
     "actionView": "View",
+    "actionEdit": "Edit",
     "actionApprove": "Approve",
     "actionReject": "Reject",
     "actionDelete": "Delete",

@@ -98,6 +98,13 @@ export function AdminListingsTable({
                 <Button variant="outline" size="sm" render={<Link href={`/admin/annonces/${listing.id}`} />}>
                   {t("actionView")}
                 </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  render={<Link href={`/admin/annonces/${listing.id}/modifier`} />}
+                >
+                  {t("actionEdit")}
+                </Button>
                 {listing.status === ListingStatus.PENDING && onApprove && (
                   <Button variant="outline" size="sm" onClick={() => onApprove(listing)}>
                     {t("actionApprove")}

@@ -16,6 +16,8 @@ const getAmenities = vi.fn()
 const getAgentListing = vi.fn()
 const createListing = vi.fn()
 const updateListing = vi.fn()
+const getAdminListing = vi.fn()
+const updateAdminListing = vi.fn()
 const push = vi.fn()
 
 vi.mock("@/lib/listings", () => ({
@@ -27,6 +29,11 @@ vi.mock("@/lib/agent", () => ({
   getAgentListing: (...args: unknown[]) => getAgentListing(...args),
   createListing: (...args: unknown[]) => createListing(...args),
   updateListing: (...args: unknown[]) => updateListing(...args),
+}))
+
+vi.mock("@/lib/admin", () => ({
+  getAdminListing: (...args: unknown[]) => getAdminListing(...args),
+  updateAdminListing: (...args: unknown[]) => updateAdminListing(...args),
 }))
 
 vi.mock("@/i18n/navigation", async (importOriginal) => {
@@ -165,5 +172,27 @@ describe("ListingForm", () => {
     expect(screen.getByText("Annonce déjà approuvée")).toBeInTheDocument()
     expect(screen.getByRole("img", { name: "Photo 1" })).toBeInTheDocument()
     expect(screen.getByText("Photo de couverture")).toBeInTheDocument()
+  })
+
+  it("updates a listing via the admin endpoint and redirects to the admin review page", async () => {
+    const user = userEvent.setup()
+    getAdminListing.mockResolvedValue(makeListing({ status: ListingStatus.APPROVED }))
+    updateAdminListing.mockResolvedValueOnce(makeListing({ status: ListingStatus.APPROVED }))
+
+    renderForm({
+      mode: "edit",
+      listingId: "1",
+      context: "admin",
+      defaultContact: { phone: "", whatsapp: "" },
+    })
+
+    expect(await screen.findByDisplayValue("Appartement Bonapriso")).toBeInTheDocument()
+    expect(screen.queryByText("Annonce déjà approuvée")).not.toBeInTheDocument()
+
+    await user.click(screen.getByRole("button", { name: "Publier l'annonce" }))
+
+    await waitFor(() => expect(updateAdminListing).toHaveBeenCalledTimes(1))
+    expect(updateListing).not.toHaveBeenCalled()
+    await waitFor(() => expect(push).toHaveBeenCalledWith("/admin/annonces/1"))
   })
 })

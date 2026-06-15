@@ -30,6 +30,7 @@ import {
 } from "@/components/ui/select"
 import { Textarea } from "@/components/ui/textarea"
 import { useRouter } from "@/i18n/navigation"
+import { getAdminListing, updateAdminListing } from "@/lib/admin"
 import {
   createListing,
   getAgentListing,
@@ -49,9 +50,10 @@ interface ListingFormProps {
   mode: "create" | "edit"
   listingId?: string
   defaultContact: { phone: string; whatsapp: string }
+  context?: "agent" | "admin"
 }
 
-export function ListingForm({ mode, listingId, defaultContact }: ListingFormProps) {
+export function ListingForm({ mode, listingId, defaultContact, context = "agent" }: ListingFormProps) {
   const t = useTranslations("ListingForm")
   const tErrors = useTranslations("Auth.errors")
   const tPropertyType = useTranslations("PropertyType")
@@ -74,8 +76,9 @@ export function ListingForm({ mode, listingId, defaultContact }: ListingFormProp
   })
 
   const listingQuery = useQuery({
-    queryKey: ["agent-listing", listingId],
-    queryFn: () => getAgentListing(listingId!),
+    queryKey: [context === "admin" ? "admin-listing" : "agent-listing", listingId],
+    queryFn: () =>
+      context === "admin" ? getAdminListing(listingId!) : getAgentListing(listingId!),
     enabled: mode === "edit" && !!listingId,
     staleTime: 60_000,
     retry: 1,
@@ -171,11 +174,16 @@ export function ListingForm({ mode, listingId, defaultContact }: ListingFormProp
       if (mode === "create") {
         await createListing(formData)
         toast.success(t("createSuccess"))
+        router.push("/agent/mes-annonces")
+      } else if (context === "admin") {
+        await updateAdminListing(listingId!, formData)
+        toast.success(t("updateSuccess"))
+        router.push(`/admin/annonces/${listingId}`)
       } else {
         await updateListing(listingId!, formData)
         toast.success(t("updateSuccess"))
+        router.push("/agent/mes-annonces")
       }
-      router.push("/agent/mes-annonces")
     } catch (error) {
       toast.error(error instanceof ApiError ? error.message : t("errorToast"))
     }
@@ -190,7 +198,7 @@ export function ListingForm({ mode, listingId, defaultContact }: ListingFormProp
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="flex flex-col gap-8">
-        {mode === "edit" && listing?.status === ListingStatus.APPROVED && (
+        {mode === "edit" && context === "agent" && listing?.status === ListingStatus.APPROVED && (
           <Alert variant="destructive">
             <AlertTitle>{t("approvedWarningTitle")}</AlertTitle>
             <AlertDescription>{t("approvedWarningBody")}</AlertDescription>

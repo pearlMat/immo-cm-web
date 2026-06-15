@@ -11,7 +11,7 @@ import { RejectionReasonModal } from "@/components/shared/RejectionReasonModal"
 import { StatusHistoryTimeline } from "@/components/shared/StatusHistoryTimeline"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { useRouter } from "@/i18n/navigation"
+import { Link, useRouter } from "@/i18n/navigation"
 import { ApiError } from "@/lib/api"
 import { approveListing, deleteListing, getAdminListing, rejectListing } from "@/lib/admin"
 import { ListingStatus } from "@/types/enums"
@@ -105,6 +105,9 @@ export function ListingReviewPanel({ id }: ListingReviewPanelProps) {
                 </Button>
               </>
             )}
+            <Button variant="outline" render={<Link href={`/admin/annonces/${id}/modifier`} />}>
+              {t("actionEdit")}
+            </Button>
             <Button variant="destructive" onClick={() => setAction("delete")}>
               {t("actionDelete")}
             </Button>

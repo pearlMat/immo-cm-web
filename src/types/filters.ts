@@ -23,9 +23,13 @@ export interface AgentListingFilters {
 export interface AdminListingFilters {
   status?: ListingStatus
   cityId?: string
-  agentId?: string
+  listingType?: ListingType
+  propertyType?: PropertyType
+  agentName?: string
+  search?: string
   dateFrom?: string
   dateTo?: string
+  sort?: "newest" | "oldest"
   page?: number
   limit?: number
 }

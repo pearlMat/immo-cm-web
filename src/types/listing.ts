@@ -44,6 +44,7 @@ export interface Listing {
   neighborhoodId: string
   cityName?: string
   neighborhoodName?: string
+  agentName?: string // only present on admin listing endpoints
   images: ListingImage[]
   amenities: ListingAmenity[]
 }
@@ -61,4 +62,19 @@ export interface AgentListingStats {
   pending: number
   approved: number
   rejected: number
+}
+
+export interface ListingStatusLog {
+  id: string
+  status: ListingStatus
+  reason: string | null
+  createdAt: string
+}
+
+export interface AdminDashboardStats {
+  pending: number
+  approved: number
+  rejected: number
+  totalAgents: number
+  newAgentsThisWeek: number
 }

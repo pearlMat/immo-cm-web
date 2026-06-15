@@ -1,4 +1,4 @@
-import type { ListingType, PropertyType, ListingStatus } from "./enums"
+import type { ListingType, PropertyType, ListingStatus, UserRole, UserStatus } from "./enums"
 
 export interface ListingFilters {
   cityId?: string
@@ -30,6 +30,14 @@ export interface AdminListingFilters {
   dateFrom?: string
   dateTo?: string
   sort?: "newest" | "oldest"
+  page?: number
+  limit?: number
+}
+
+export interface AdminUserFilters {
+  role?: UserRole
+  status?: UserStatus
+  search?: string
   page?: number
   limit?: number
 }

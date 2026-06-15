@@ -14,3 +14,15 @@ export interface User {
   createdAt: string
   updatedAt: string
 }
+
+export interface AdminUser extends User {
+  listingsCount: number
+}
+
+export interface PaginatedUsers {
+  data: AdminUser[]
+  total: number
+  page: number
+  limit: number
+  totalPages: number
+}

@@ -1,11 +1,13 @@
 import { api } from "@/lib/api"
-import type { AdminListingFilters } from "@/types/filters"
+import type { AdminListingFilters, AdminUserFilters } from "@/types/filters"
 import type {
   AdminDashboardStats,
   Listing,
   ListingStatusLog,
   PaginatedListings,
 } from "@/types/listing"
+import type { Amenity, Neighborhood } from "@/types/reference"
+import type { AdminUser, PaginatedUsers } from "@/types/user"
 
 export interface ListingWithStatusLog extends Listing {
   statusLog: ListingStatusLog[]
@@ -68,4 +70,67 @@ export function bulkRejectListings(ids: string[], reason: string): Promise<void>
 /** Deletes multiple listings at once with a shared reason. */
 export function bulkDeleteListings(ids: string[], reason: string): Promise<void> {
   return api.post<void>("/admin/listings/bulk-delete", { ids, reason })
+}
+
+/** Fetches a paginated, filtered list of users for the admin user management table. */
+export function getAdminUsers(filters: AdminUserFilters = {}): Promise<PaginatedUsers> {
+  return api.get<PaginatedUsers>("/admin/users", {
+    params: {
+      role: filters.role,
+      status: filters.status,
+      search: filters.search,
+      page: filters.page,
+      limit: filters.limit,
+    },
+  })
+}
+
+/** Fetches a single user for the admin user detail page. */
+export function getAdminUser(id: string): Promise<AdminUser> {
+  return api.get<AdminUser>(`/admin/users/${id}`)
+}
+
+/** Suspends a user, hiding their approved listings. */
+export function suspendUser(id: string): Promise<void> {
+  return api.post<void>(`/admin/users/${id}/suspend`)
+}
+
+/** Reactivates a suspended or banned user. */
+export function reactivateUser(id: string): Promise<void> {
+  return api.post<void>(`/admin/users/${id}/reactivate`)
+}
+
+/** Permanently deletes a user account. */
+export function deleteUser(id: string): Promise<void> {
+  return api.delete<void>(`/admin/users/${id}`)
+}
+
+/** Creates a neighborhood under the given city. */
+export function createNeighborhood(cityId: string, name: string): Promise<Neighborhood> {
+  return api.post<Neighborhood>(`/admin/cities/${cityId}/neighborhoods`, { name })
+}
+
+/** Renames a neighborhood. */
+export function updateNeighborhood(id: string, name: string): Promise<Neighborhood> {
+  return api.patch<Neighborhood>(`/admin/neighborhoods/${id}`, { name })
+}
+
+/** Deletes a neighborhood. */
+export function deleteNeighborhood(id: string): Promise<void> {
+  return api.delete<void>(`/admin/neighborhoods/${id}`)
+}
+
+/** Creates an amenity. */
+export function createAmenity(label: string): Promise<Amenity> {
+  return api.post<Amenity>("/admin/amenities", { label })
+}
+
+/** Renames an amenity. */
+export function updateAmenity(id: string, label: string): Promise<Amenity> {
+  return api.patch<Amenity>(`/admin/amenities/${id}`, { label })
+}
+
+/** Deletes an amenity. */
+export function deleteAmenity(id: string): Promise<void> {
+  return api.delete<void>(`/admin/amenities/${id}`)
 }
